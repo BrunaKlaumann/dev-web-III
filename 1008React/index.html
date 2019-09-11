@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom-server.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -14,6 +14,14 @@
         let h1 = React.createElement("h1",null, "primeiro titulo");
 
         ReactDOM.render(h1, document.getElementById("app"));
+
+        let janela = React.createElement("div", null,
+                     React.createElement("h2", null, "Aqui é o H2"),
+                     React.createElement("h3",null,
+                            React.createElement("i", null, "Aqui é o h3")
+                             )
+                     )
+                     ReactDOM.render(janela, document.getElementById("app2"));
     </script>
     
 </body>
